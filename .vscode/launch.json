@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+
+            "executable": "${workspaceRoot}\\bin\\elf\\arm-samc21n.elf",
+            "name": "Debug MCU",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "board/atmel_samc21_xplained_pro.cfg"
+            ],
+            "svdFile": "${workspaceRoot}\\mcu\\ATSAMC21N18A\\svd\\ATSAMC21N18A.svd",
+            "preLaunchTask": "Flash"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "ARM",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/inc/**",
+                "${workspaceFolder}/mcu/ATSAMC21N18A/include/**",
+                "${workspaceFolder}/mcu/ATSAMC21N18A/start_up/**",
+                "${workspaceFolder}/lib/arm/arm-none-eabi/9-2019-q4-major/include/**",
+                "${workspaceFolder}/lib/arm/arm-none-eabi/9-2019-q4-major/lib/include/**",
+                "${workspaceFolder}/lib/arm/arm-none-eabi/9-2019-q4-major/lib/include-fixed/**",
+                "${workspaceFolder}/lib/CMSIS/5.4.0/CMSIS/Core/Include/**"
+            ],
+            "defines": [
+                "__SAMC21N18A__",
+                "CORTEX_M0PLUS"
+            ],
+            "compilerPath": "C:/Develop/ARM/9 2019-q4-major/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/build/Cmake/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

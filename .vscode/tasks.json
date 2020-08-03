@@ -1,0 +1,62 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "ninja -C ${workspaceFolder}/build/Cmake/ flash",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Size",
+            "type": "shell",
+            "command": "ninja -C ${workspaceFolder}/build/Cmake/ size",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Disassemble",
+            "type": "shell",
+            "command": "ninja -C ${workspaceFolder}/build/Cmake/ disassemble",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Doxygen",
+            "type": "shell",
+            "command": "doxygen",
+            "args": [".\\doxygen\\Doxyfile"],
+            "presentation": {
+				"echo": true,
+				"focus": false,
+				"panel": "shared",
+				"reveal": "silent"
+			},
+            "problemMatcher": []
+        }
+    ]
+}

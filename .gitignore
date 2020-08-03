@@ -1,0 +1,32 @@
+build/Cmake/.Cmake
+build/Cmake/CMakeFiles/CMakeTmp
+build/Cmake/CMakeFiles/*.dir
+build/Cmake/CMakeFiles/3.17.2/CompilerId*
+build/Cmake/CMakeFiles/3.17.2/CMakeC*
+build/Cmake/CMakeFiles/3.17.2/CMakeDetermineCompilerABI_*
+build/Cmake/CMakeFiles/*.log
+build/Cmake/CMakeFiles/*.check_cache
+build/Cmake/CMakeFiles/TargetDirectories.txt
+build/Cmake/.ninja_*
+build/Cmake/rules.ninja
+build/Cmake/build.ninja
+build/Cmake/compile_commands.json
+build/Cmake/cmake_install.cmake
+build/Cmake/CMakeCache.txt
+
+# Utility binary ignores...BUILD THEM YOURSELF
+tools/scripts/Utilities/**/bin
+tools/scripts/Utilities/**/obj
+tools/scripts/Utilities/**/executable/*.json
+tools/scripts/Utilities/**/executable/*.dll
+
+# File types to ignore..
+# If you want them build them yourself!
+*.bin
+*.asm
+*.elf
+*.map
+*.sym
+*.hex
+
+*.pdb

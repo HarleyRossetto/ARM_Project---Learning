@@ -1,0 +1,35 @@
+https://forum.arduino.cc/index.php?topic=387229.15
+
+The next step is to select the peripheral for the given pin, using the "Peripheral Multiplexing" 
+registers. Each peripheral is given a letter from A-H. The TCC timers are listed as peripheral F. 
+While there's one "Pin Configuration" register per pin, there's only one "Peripheral Multiplexing" 
+registers for each odd and even pin pair. (So there are only half the number of "Periphal Multiplexing"
+ registers). For example port pin PA21 (D7) is odd, this is paired with PA20 (D6), which is even.
+
+Each "Peripheral Multiplexing" 8-bit register is split into two 4-bit halves, odd and even, 
+with each half specifying the selected peripheral A-H. PORT_PMUX_PMUXO_F is used to set the 
+odd port for peripheral F and PORT_PMUX_PMUXE_F to set the even port. To select a given PMUX 
+register you specify the even pair divided by 2 (>> 1), as there are only half the number of 
+"Peripheral Multiplexing" registers.
+
+
+=====================================================================================================
+
+https://www.avrfreaks.net/forum/selecting-multiplexers-saml21
+
+The datasheet states that there is an even and odd PUMUXn (8-bit) register based on the pin number (four bits per pin).
+
+Each pin is by default controlled by the PORT as a general purpose I/O and alternatively it can be assigned to one of the peripheral functions A, B, C, D, E, F, G or H. To enable a peripheral function on a pin, the Peripheral Multiplexer Enable bit in the Pin Configuration register corresponding to that pin (PINCFGn.PMUXEN, n = 0-31) in the PORT must be written to one. The selection of peripheral function A to H is done by writing to the Peripheral
+Multiplexing Odd and Even bits in the Peripheral Multiplexing register (PMUXn.PMUXE/O) in the PORT.
+
+The PMUXn register describes the usage where the even/odd pins are treated as a pair with 16 alternate selections per pin possible.  
+
+Bits 7:4 – PMUXO[3:0]: Peripheral Multiplexing Odd
+These bits select the peripheral function for odd-numbered pins (2*n + 1) of a PORT group, if the corresponding PINCFGy.PMUXEN bit is one.
+
+Bits 3:0 – PMUXE[3:0]: Peripheral Multiplexing Even
+These bits select the peripheral function for even-numbered pins (2*n) of a PORT group, if the corresponding PINCFGy.PMUXEN bit is one.
+
+ 
+
+ 

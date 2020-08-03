@@ -1,0 +1,50 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cmake.buildDirectory": "${workspaceFolder}/build/Cmake",
+		"cmake.configureSettings": {
+			"CMAKE_SYSTEM" : "ARM",
+			"CMAKE_SYSTEM_NAME" : "Generic",
+			"CMAKE_SYSTEM_VERSION" : "1.0",
+			"CMAKE_CROSSCOMPILING" : "TRUE",
+			"CMAKE_TRY_COMPILE_TARGET_TYPE" : "STATIC_LIBRARY"
+		},
+		"workbench.colorTheme": "Default High Contrast",
+		"files.associations": {
+			"climits": "cpp",
+			"cstdint": "cpp",
+			"typeinfo": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			//REQUIRED
+			"ms-vscode.cpptools",					//CPP Tools
+			"ms-vscode.cmake-tools",				//CMake Tools
+			"marus25.cortex-debug",					//Cortex Debugging Environment
+			//RECOMMENDED	
+			"bbenoist.doxygen",						//Doxygen Doxyfile syntax support
+			"mhutchie.git-graph",					//Git Graph of repository
+			"donjayamanne.githistory",				//Git File History
+			"github.vscode-pull-request-github",	//Pull request support
+			"eamodio.gitlens",						//Git Visualisation
+			"twxs.cmake",							//CMake language support
+			"cschlosser.doxdocgen",					//Doxygen comment block generation
+			"dan-c-underwood.arm",					//ARM Assembly syntax highlighting
+			"mateuszchudyk.hexinspector",			//View other forms of Hexidecimal values
+			"zixuanwang.linkerscript",				//Language suppport for GNU Linker Script
+			"surajbarkale.ninja",					//Ninja build file syntax highlighting
+			//PERSONAL	
+			"ibm.output-colorizer",					//VSCode Log output colouriser
+			"tomoki1207.pdf",						//Allows PDF viewing in VSCode, great for datasheets
+			"vscode-icons-team.vscode-icons",		//Adds a wide range of icons to VSCode
+			"cheshirekow.cmake-format",				//Cleans up formatting of .list files
+			"coenraads.bracket-pair-colorizer-2",	//Allows matching brackets to be identfied with colours
+			"alefragnani.bookmarks"					//Bookmark your files!
+		]
+	}
+}
